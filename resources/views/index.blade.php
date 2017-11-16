@@ -1,12 +1,11 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
+@extends('layouts.headerfooter')
+
 
 <header>
-@include('include.header')
     <title>Home - dePrevia</title>
-
 </header>
 
+@section('contenido')
 <body>
 
     <div class="section no-pad-bot" id="index-banner">
@@ -65,12 +64,7 @@
         });
     </script>
 
-    <footer>
-        @include("include.footer")
-    </footer>
-
-</body>
-</html>
+@endsection('contenido')
 
 
 

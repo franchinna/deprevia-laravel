@@ -1,8 +1,11 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-<header>
-    @include("include.header")
-</header>
+@extends('layouts.headerfooter')
+
+
+
+@section('contenido')
+    <header>
+        <title>FAQs - dePrevia</title>
+    </header>
 
 <body>
 <div>
@@ -35,11 +38,6 @@
     <br><br>
 </div>
 </body>
-
-<footer style="">
-    @include("include.footer")
-</footer>
-
-</html>
+@endsection('contenido')
 
 
