@@ -54,7 +54,7 @@ class RegisterController extends Controller
             'edad' => 'required|numeric|min:18',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
-            'password-confirm' => 'string|min:6|confirmed'
+            'password_confirmation' => 'required|string|min:6',
         ]);
     }
 
@@ -74,7 +74,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'genero' => $data['genero'],
             'edad' => $data['edad'],
-
         ]);
     }
 }

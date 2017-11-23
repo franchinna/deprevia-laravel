@@ -70,8 +70,8 @@
                                 <input id="password" type="password" class="validate" name="password">
                             </div>
                             <div class="input-field col s6">
-                                <label for="password-confirm">Confirmar Contraseña</label>
-                                <input id="password-confirm" type="password" class="validate" name="password-confirm">
+                                <label for="password_confirmation">Confirmar Contraseña</label>
+                                <input id="password_confirmation" type="password" class="validate" name="password_confirmation">
                             </div>
 
                             <div class="input-field col s12">
@@ -91,15 +91,15 @@
                             <div class="row">
                                 <div action="col s3">
 
-                                    <input name="genero" type="radio" id="genero" value="0" class="with-gap">
+                                    <input name="genero" type="radio" id="genero_masculino" value="0" class="with-gap">
                                     <label for="genero_masculino">Hombre</label>
 
 
-                                    <input name="genero" type="radio" id="genero" value="1" class="with-gap">
+                                    <input name="genero" type="radio" id="genero_femenino" value="1" class="with-gap">
                                     <label for="genero_femenino">Mujer</label>
 
 
-                                    <input name="genero" type="radio" id="genero" value="2" class="with-gap">
+                                    <input name="genero" type="radio" id="genero_otros" value="2" class="with-gap">
                                     <label for="genero_otros">Otro</label>
 
                                 </div>

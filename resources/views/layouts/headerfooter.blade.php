@@ -17,19 +17,29 @@
     <div class="navbar-fixed">
         <nav class="red accent-4" role="navigation">
             <div class="nav-wrapper container">
-                <img src="images/logo.png" alt="" style="width: 200px; margin: 10px;">
+                <a href="/"><img src="images/logo.png" alt="" style="width: 200px; margin: 10px;"></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="/">Home</a></li>
                     <li><a href="/faqs">FAQs</a></li>
-                    <li><a href="/register">Registro</a></li>
-                    <li><a href="/login">Login</a></li>
+                    @if (auth()->check())
+                        <li><a href="/home">Mi Perfil</a></li>
+                        <li><a class="waves-effect waves-red" href="{{auth::logout()}}">Cerrar Sesion</a></li>
+                    @else
+                        <li><a href="/register">Registro</a></li>
+                        <li><a href="/login">Login</a></li>
+                    @endif
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
                     <li><a class="waves-effect waves-red" href="/">Home</a></li>
                     <li><a class="waves-effect waves-red" href="/faqs">FAQs</a></li>
-                    <li><a class="waves-effect waves-red" href="/register">Registro</a></li>
-                    <li><a class="waves-effect waves-red" href="/login">Login</a></li>
+                    @if (auth()->check())
+                        {{csrf_field()}}
+                        <li><a class="waves-effect waves-red" href="/logout">Cerrar Sesion</a></li>
+                    @else
+                        <li><a class="waves-effect waves-red" href="/register">Registro</a></li>
+                        <li><a class="waves-effect waves-red" href="/login">Login</a></li>
+                    @endif
                 </ul>
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
